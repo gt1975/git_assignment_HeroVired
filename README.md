@@ -1,35 +1,31 @@
-# CalculatorPlus App
+import math
 
-This is a simple calculator application with basic arithmetic operations.
+class Calculator:
+    def add(self, a, b):
+        return a + b
 
-## Assignment Steps
+    def subtract(self, a, b):
+        return a - b
 
-### Repository Setup
-- Created a private GitHub repository named 'git_assignment_HeroVired'
-- Created initial code structure
+    def multiply(self, a, b):
+        return a * b
 
-### Branch Management
-- Created 'dev' branch with initial calculator code
-- Created 'feature/sqrt' branch for square root implementation
-- Fixed critical bug in divide function
+    def divide(self, a, b):
+        return a / b
 
-### Releases
-- Created version 1 release with basic calculator functionality
-- Created version 2 release with square root feature and bug fixes
+    def square_root(self, x):
+        return math.sqrt(x)
 
-### Collaboration
-- Added classmate as collaborator
-- Requested code review from team member
+if __name__ == "__main__":
+    calculator = Calculator()
+    num1 = 16
+    num2 = 4
 
-## Features
-- Addition
-- Subtraction
-- Multiplication
-- Division (with zero division check)
-- Square Root calculation
+    print(f"{num1} + {num2} = {calculator.add(num1, num2)}")
+    print(f"{num1} - {num2} = {calculator.subtract(num1, num2)}")
+    print(f"{num1} * {num2} = {calculator.multiply(num1, num2)}")
+    print(f"{num1} / {num2} = {calculator.divide(num1, num2)}")
 
-## How to Use
-```python
-calculator = Calculator()
-result = calculator.add(5, 3)  # Returns 8
-sqrt_result = calculator.square_root(16)  # Returns 4.0
+    num3 = 25
+    print(f"The square root of {num3} = {calculator.square_root(num3)}")
+    print ("testing")
